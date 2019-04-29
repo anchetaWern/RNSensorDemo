@@ -1,6 +1,8 @@
 # RNSensorDemo
 A sample React Native app that uses the accelerometer data from React Native Sensors.
 
+You can read the full tutorial at: [https://pusher.com/tutorials/game-device-sensors-react-native](https://pusher.com/tutorials/game-device-sensors-react-native)
+
 ### Prerequisites
 
 -   React Native development environment
