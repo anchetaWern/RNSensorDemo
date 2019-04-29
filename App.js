@@ -23,6 +23,8 @@ const BALL_SIZE = 20;
 const DEBRIS_HEIGHT = 70;
 const DEBRIS_WIDTH = 20;
 
+const mid_point = (width / 2) - (BALL_SIZE / 2);
+
 const ballSettings = {
   isStatic: true
 };
@@ -84,7 +86,19 @@ export default class App extends Component {
 
       this.setState(state => ({
         x: x + state.x
-      }));
+      }), () => {
+
+        if (this.state.x < 0 || this.state.x > width) {
+          Matter.Body.setPosition(ball, {
+            x: mid_point,
+            y: height - 30
+          });
+
+          this.setState({
+            x: mid_point
+          });
+        }
+      });
 
     });
 
