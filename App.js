@@ -69,7 +69,7 @@ export default class App extends Component {
 
     this.physics = (entities, { time }) => {
       let engine = entities["physics"].engine;
-      engine.world.gravity.y = 1.5;
+      engine.world.gravity.y = 0.5;
       Matter.Engine.update(engine, time.delta);
       return entities;
     };
